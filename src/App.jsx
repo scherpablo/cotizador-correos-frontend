@@ -8,8 +8,8 @@ import Header from "./components/Header";
 import Button from "./components/Button";
 import { formatearDinero, devolverDinero, calcularPagoMensual } from "./helpers";
 
-const publicKey = import.meta.env.VITE_MP_PUBLIC_KEY || "TEST-7b9596da-790e-4ec1-8e05-74fe238bdc36";
-const backend_Url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/create_preference";
+const publicKey = import.meta.env.VITE_MP_PUBLIC_KEY;
+const backend_Url = import.meta.env.VITE_BACKEND_URL;
 
 const notificationInitialState = {
   isOpen: false,
