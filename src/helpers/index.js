@@ -14,7 +14,7 @@ const devolverDinero = (correos, plazo) => {
         1: 1299,
         12: 8388,
         24: 14376,
-        48: 23952
+        48: 23952,
     };
 
     if (correos) {
@@ -22,12 +22,13 @@ const devolverDinero = (correos, plazo) => {
     }
 
     const precioPlazo = precios[plazo] || precios[1];
-    total *= precioPlazo * 1.5;
+    total *= Math.round(precioPlazo * 1.65);
 
     return total;
 }
 
 const calcularPagoMensual = (total, plazo) => {
+
     return total / plazo;
 }
 
