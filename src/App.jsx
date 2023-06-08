@@ -9,7 +9,7 @@ import Button from "./components/Button";
 import { formatearDinero, devolverDinero, calcularPagoMensual } from "./helpers";
 
 const publicKey = import.meta.env.VITE_MP_PUBLIC_KEY;
-const URL = import.meta.env.VITE_URL || "http://localhost:5000/create_preference";
+const backend_Url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/create_preference";
 
 const notificationInitialState = {
   isOpen: false,
@@ -56,7 +56,7 @@ function App() {
   async function createPreference() {
     try {
       const unit_price = total / correos;
-      const response = await axios.post(`${URL}`, {
+      const response = await axios.post(`${backend_Url}`, {
         title: `${correos} ${textoCorreos()}`, // Título dinámico basado en la cantidad de correos
         quantity: correos, // Cantidad de correos dinámica
         currency_id: "ARS",
