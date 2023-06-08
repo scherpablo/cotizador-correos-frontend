@@ -181,7 +181,7 @@ function App() {
           <h2 className="text-4xl font-extrabold text-center">Resumen
             <span className="text-indigo-600 font-extrabold"> {span} </span>
             <p className="text-xl text-center font-extrabold mt-5">* Período <span className="text-indigo-600 font-extrabold">{meses} {textoMeses()}</span> *</p>
-            <p className="text-xl text-center font-extrabold mt-2">* 1 pago de <span className="text-green-600 font-extrabold">{formatearDinero(total)}</span> *</p>
+            <p className="text-xl text-center font-extrabold mt-2">* 1 Total <span className="text-green-600 font-extrabold">{formatearDinero(total)}</span> *</p>
           </h2>
           <div className="text-center">
             <button onClick={handleBuy} className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">Generar Pago</button>
