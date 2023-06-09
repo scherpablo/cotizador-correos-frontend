@@ -115,7 +115,7 @@ function App() {
 
   return (
     <main>
-      <div className="my-6 max-w-lg mx-auto bg-indigo-100 shadow-md pl-5 pr-5 pt-3 pb-3 rounded-lg border-2 border-indigo-600">
+      <div className="my-4 max-w-lg mx-auto bg-indigo-100 shadow-md pl-5 pr-5 pt-3 pb-3 rounded-lg border-2 border-indigo-600">
         <Header />
         <div className="my-5 space-y-3 bg-indigo-200 rounded-xl p-5">
           <div className="flex justify-between my-2">
