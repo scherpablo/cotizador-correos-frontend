@@ -26,8 +26,10 @@ function App() {
   async function createPreference() {
     try {
       const unit_price = total / correos;
+      const description = `${correos} ${textoCorreos()}`;
+      
       const response = await axios.post(`${backend_Url}`, {
-        title: `${correos} ${textoCorreos()}`, // Título dinámico basado en la cantidad de correos
+        description: description, // Título dinámico basado en la cantidad de correos
         quantity: correos, // Cantidad de correos dinámica
         currency_id: "ARS",
         unit_price: unit_price, // Precio total dinámico
@@ -113,7 +115,7 @@ function App() {
 
   return (
     <main>
-      <div className="my-6 max-w-lg mx-auto bg-indigo-100 shadow-md pl-10 pr-10 pt-5 pb-5 rounded-lg border-8 border-indigo-200">
+      <div className="my-6 max-w-lg mx-auto bg-indigo-100 shadow-md pl-5 pr-5 pt-3 pb-3 rounded-lg border-2 border-indigo-600">
         <Header />
         <div className="my-5 space-y-3 bg-indigo-200 rounded-xl p-5">
           <div className="flex justify-between my-2">
