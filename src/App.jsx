@@ -12,6 +12,13 @@ import { formatearDinero, devolverDinero, calcularPagoMensual } from "./helpers"
 const publicKey = import.meta.env.VITE_MP_PUBLIC_KEY;
 const backend_Url = import.meta.env.VITE_BACKEND_URL;
 
+const customization = {
+  texts: {
+    action: 'pay',
+    valueProp: 'security_safety',
+  },
+}
+
 function App() {
   const [correos, setCorreos] = useState(5);
   const [meses, setMeses] = useState(1);
@@ -27,7 +34,7 @@ function App() {
     try {
       const unit_price = total / correos;
       const description = `${correos} ${textoCorreos()}`;
-      
+
       const response = await axios.post(`${backend_Url}`, {
         description: description, // Título dinámico basado en la cantidad de correos
         quantity: correos, // Cantidad de correos dinámica
@@ -115,7 +122,7 @@ function App() {
 
   return (
     <main>
-      <div className="my-4 max-w-lg mx-auto bg-indigo-100 shadow-md pl-5 pr-5 pt-3 pb-3 rounded-lg border-2 border-indigo-600">
+      <div className="my-4 max-w-lg mx-auto bg-indigo-100 shadow-md pl-5 pr-5 pt-3 pb-3 rounded-lg">
         <Header />
         <div className="my-5 space-y-3 bg-indigo-200 rounded-xl p-5">
           <div className="flex justify-between my-2">
@@ -159,7 +166,7 @@ function App() {
           </h2>
           <div className="text-center">
             <button onClick={handleBuy} className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">Generar Pago</button>
-            {preferenceId && <Wallet initialization={{ preferenceId }} />}
+            {preferenceId && <Wallet initialization={{ preferenceId }} customization={customization} />}
           </div>
         </div>
         <div className="mb-3">
