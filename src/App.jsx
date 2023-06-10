@@ -165,7 +165,7 @@ function App() {
             <p className="text-xl text-center font-extrabold mt-2">* Total <span className="text-green-600 font-extrabold">{formatearDinero(total)}</span> *</p>
           </h2>
           <div className="text-center">
-            <button onClick={handleBuy} className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">Generar Pago</button>
+            <button onClick={handleBuy} className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">Generar Botón de Pago</button>
             {preferenceId && <Wallet initialization={{ preferenceId }} customization={customization} />}
           </div>
         </div>
