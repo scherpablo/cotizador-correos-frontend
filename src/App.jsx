@@ -173,7 +173,7 @@ function App() {
           <Notifications />
         </div>
         <p className="text-xs text-center font-bold text-gray-800">El servicio incluye contratación del dominio, alojamiento en servidores y configuración de correo electrónico.</p>
-        <p className="text-xs text-center font-bold mt-1 text-gray-800">Si tienes alguna duda puedes contactarme al 1132069043.</p>
+        <p className="text-xs text-center font-bold mt-1 text-gray-800">Si tienes alguna duda puedes contactarme al <a href="https://wa.me/1132069043?text=Hola,+quisiera+consultar+por+el+plan+de+correos+Business+Started.+Muchas+gracias." target="_blank" className="text-green-600">WhatsApp</a>.</p>
       </div>
     </main>
   )
