@@ -44,7 +44,7 @@ function App() {
       const { id } = response.data;
       return id;
     } catch (error) {
-      console.log(error, "error en CREATE PREFERENCES");
+      console.log(error);
     }
   }
 
